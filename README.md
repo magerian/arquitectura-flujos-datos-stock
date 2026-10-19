@@ -1,31 +1,36 @@
-# Diseño de Flujos de Datos (Data Pipelines) para Sistemas de Gestión de Stock, Pedidos y Auditoría
+# Integración de flujos de datos para stock, pedidos y auditoría
 
-## 📌 Descripción del Proyecto
-Este proyecto documenta la arquitectura lógica y el diseño de flujos de datos (*Data Workflows*) implementados para optimizar el ecosistema transaccional de una operación logística. El enfoque principal radica en garantizar la integridad, consistencia y trazabilidad de los datos desde el ingreso del pedido y la actualización de inventarios en tiempo real, hasta la generación de métricas de auditoría interna para mitigar pérdidas financieras.
+**Caso real desarrollado en Rubinzal y Asociados S.A.** | Operación logística | Santa Fe, Argentina
 
----
+## Resumen
 
-## 🚀 1. El Desafío del Negocio
-Las operaciones con sistemas de inventario tradicionales suelen presentar fallas críticas por falta de sincronización: descalces entre el stock físico y el registrado en sistema, retrasos en el procesamiento de pedidos y falta de pistas de auditoría confiables. El objetivo de este diseño fue estructurar un flujo de datos automatizado que eliminara los cuellos de botella operativos y asegurara datos 100% limpios para el negocio.
+Diseñé e integré flujos de datos relacionales para apoyar el control de stock en tiempo real, el procesamiento de pedidos y la auditoría interna. El trabajo buscó mejorar la consistencia y trazabilidad de la información operativa y ayudar a prevenir mermas.
 
----
+## Contexto
 
-## 🛠️ 2. Arquitectura y Componentes del Sistema
-*   **Ingesta de Datos de Pedidos:** Modelado del flujo de captura de órdenes de compra entrantes sin duplicación de registros.
-*   **Procesamiento y Actualización de Stock:** Lógica relacional automatizada para descontar unidades físicas de forma inmediata según la prioridad del pedido.
-*   **Módulo de Auditoría de Datos:** Creación de un historial de modificaciones (*Logs de Auditoría*) para rastrear anomalías, mermas o movimientos de stock sospechosos de forma automática.
+La operación requería mantener alineados los movimientos de pedidos, las existencias registradas y el stock físico, además de contar con información útil para revisar diferencias y posibles pérdidas.
 
----
+## Mi contribución
 
-## 📊 3. Metodología Aplicada
-1.  **Mapeo del Ciclo de Vida del Dato:** Diseño detallado del recorrido que realiza la información desde que el cliente genera el pedido hasta la expedición final.
-2.  **Validación en Origen:** Implementación de reglas lógicas de control para evitar datos corruptos, valores nulos o registros inconsistentes en las bases de datos transaccionales.
-3.  **Auditoría y Control Estadístico:** Estructuración de rutinas de conciliación diaria entre existencias físicas y registros digitales para garantizar un nivel de confianza óptimo en los inventarios.
+- Diseñé la estructura lógica y los flujos de datos entre los procesos operativos de pedidos e inventario.
+- Automaticé controles de stock y procesamiento de información para dar seguimiento oportuno a las existencias.
+- Desarrollé módulos de auditoría interna para dejar trazabilidad de cambios y apoyar la detección de mermas.
+- Apliqué reglas de validación y conciliación para mejorar la consistencia de los datos usados por la operación.
 
----
+## Resultados obtenidos
 
-## 📈 4. Impacto en la Eficiencia Operativa
-*   **Garantía de Integridad:** Eliminación total de descalces críticos de información entre los sistemas de ventas y el inventario real disponible en el almacén.
-*   **Optimización del Tiempo:** Reducción en los tiempos de validación manual en auditorías internas gracias a los reportes de trazabilidad automatizados.
-*   **Reducción de Pérdidas:** Mitigación de errores humanos en el procesamiento de pedidos de distribución gracias a flujos de control lógico.
+- Se fortaleció el control y la trazabilidad de los movimientos de stock y pedidos.
+- La automatización redujo tareas manuales de validación y facilitó la auditoría interna.
+- Los controles contribuyeron a prevenir pérdidas y a mejorar la confiabilidad de la información operativa.
 
+## Métodos y herramientas
+
+Modelado relacional, diseño de flujos de datos, validación de información, automatización de controles y auditoría de inventarios.
+
+## Alcance del caso
+
+Este repositorio documenta un desarrollo realizado en el trabajo. Describe el diseño y su aplicación operativa; no incluye código, bases internas ni cifras específicas de la empresa.
+
+## Sobre mí
+
+Claudio Domreze | Analista de Supply Chain con experiencia en logística, compras, inventarios y análisis de datos. Actualmente curso Google Data Analytics.
